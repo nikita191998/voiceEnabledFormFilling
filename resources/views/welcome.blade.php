@@ -35,7 +35,7 @@
                     @endif
                 </div>
             @endif
-        hello
+            <img src="https://crie.mietjmu.in/images/mietkalogo.png"  height="500px">
             </div>
     </body>
 </html>
