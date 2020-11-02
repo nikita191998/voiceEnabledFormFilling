@@ -39,4 +39,7 @@ h3, .h3 {
     font-size: 1.575rem;
     color:black;
 }
+#register{
+    display:none;
+}
   

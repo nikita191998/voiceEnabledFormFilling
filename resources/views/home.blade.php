@@ -25,7 +25,7 @@
             <label for="dob">Date of Birth(DOB)</label>
             <input type="date" class="form-control" id="dob" placeholder="Enter Your Date of Birth" name="dob">
           </div>
-          <div class="text-center">
+           <div class="text-center">
           <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form> 
