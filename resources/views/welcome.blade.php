@@ -55,7 +55,7 @@
     </body>
     <script>
 function showlogin(){
-document.getElementById('login').classList.addClass('show')
+document.getElementById('login').classList.addClass('show');
 }
     </script>
 </html>
