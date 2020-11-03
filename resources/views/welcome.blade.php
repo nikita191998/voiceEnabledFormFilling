@@ -26,10 +26,20 @@
         <style>
             body {
                 font-family: 'Nunito';
+                background:black;
+            }
+            a{
+                cursor:pointer;
+            }
+            .card{
+                height:600px;
+            }
+            #homepage{
+            background-image: url('{{ asset("images/Combined_Advertisment-2.jpg") }}');
             }
         </style>
     </head>
-    <body class="container-fluid">
+    <body class="container-fluid" id="homepage">
         <div class="row" style="height:100%">
             <div class="col-6">
                 <img src="{{ asset('images/Combined_Advertisment-2.jpg') }}" style="width:100%;height:100%">
@@ -41,12 +51,18 @@
                         @auth
                             <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                         @else
-                        <div class="row d-flex justify-content-between">
-                        <a onclick="showlogin()" >Login</a>
-                        <a onclick="show register()">Register</a>
+                        <div class="row d-flex justify-content-center">
+                        <button id="loginb" class="active btn btn-secondary" onclick="showlogin()" >Login</button>
+                        &nbsp | &nbsp
+                        <button id="registerb" class="btn btn-secondary" onclick="showRegister()">Register</button>
                         </div>
+                        <div>
                         @include("auth.login")
+                        </div>
+                        <div>
                         @include("auth.register")
+
+                        </div>
                         @endif
                     </div>
                 @endif
@@ -54,8 +70,25 @@
         </div>
     </body>
     <script>
-function showlogin(){
-document.getElementById('login').classList.addClass('show');
-}
+        const login=document.getElementById('login')
+        const register=document.getElementById('register')
+        function showlogin(){
+            login.classList.add('show');
+            login.classList.remove('hidden');
+            register.classList.remove('show');
+            register.classList.add('hidden');
+            document.getElementById('loginb').classList.toggle("active");
+            document.getElementById('registerb').classList.toggle("active");
+
+        }
+        function showRegister(){
+            login.classList.add('hidden');
+            login.classList.remove('show');
+            register.classList.remove('hidden');
+            register.classList.add('show');
+            document.getElementById('registerb').classList.toggle("active");
+            document.getElementById('loginb').classList.toggle("active");
+
+        }
     </script>
 </html>

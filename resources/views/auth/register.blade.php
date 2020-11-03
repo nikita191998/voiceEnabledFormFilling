@@ -1,5 +1,5 @@
 
-            <div class="card" id="register">
+            <div class="card hidden" id="register">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
