@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Voice enabled form filling</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,36 +32,29 @@
                 cursor:pointer;
             }
             .card{
-                height:600px;
+                height:500px;
             }
             #homepage{
-            background-image: url('{{ asset("images/Combined_Advertisment-2.jpg") }}');
+            background-image: url('{{ asset("images/bg-01.jpg") }}');
+            background-size: cover;
+
             }
         </style>
     </head>
     <body class="container-fluid" id="homepage">
         <div class="row" style="height:100%">
-            <div class="col-6">
-                <img src="{{ asset('images/Combined_Advertisment-2.jpg') }}" style="width:100%;height:100%">
-            </div>
-            <div class="col-6">
-
+            <div class="col-6 offset-3">
                 @if (Route::has('login'))
                     <div class="">
                         @auth
                             <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                         @else
-                        <div class="row d-flex justify-content-center">
-                        <button id="loginb" class="active btn btn-secondary" onclick="showlogin()" >Login</button>
-                        &nbsp | &nbsp
-                        <button id="registerb" class="btn btn-secondary" onclick="showRegister()">Register</button>
-                        </div>
+                       
                         <div>
                         @include("auth.login")
                         </div>
                         <div>
                         @include("auth.register")
-
                         </div>
                         @endif
                     </div>
@@ -77,18 +70,12 @@
             login.classList.remove('hidden');
             register.classList.remove('show');
             register.classList.add('hidden');
-            document.getElementById('loginb').classList.toggle("active");
-            document.getElementById('registerb').classList.toggle("active");
-
         }
         function showRegister(){
             login.classList.add('hidden');
             login.classList.remove('show');
             register.classList.remove('hidden');
             register.classList.add('show');
-            document.getElementById('registerb').classList.toggle("active");
-            document.getElementById('loginb').classList.toggle("active");
-
         }
     </script>
 </html>

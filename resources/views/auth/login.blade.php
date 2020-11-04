@@ -1,5 +1,5 @@
 
-            <div class="card show" id="login">
+            <div class="card show mt-5" id="login">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -59,7 +59,26 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row mb-0 pt-3">
+                            <div class="col-md-6 offset-md-4">
+                            Don't have an account?
+                            <a id="registerb" class="" onclick="showRegister()" >Register</a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0 pt-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="d-flex justify-content-between align-items-center btn" style="background:#dfe1e5;width:250px">
+                                    <div>
+                                        <img src="{{asset('images/download.png')}}" alt="" width='33' >
+                                    </div>
+                                    <div>
+                                        <a style="color:black" href="{{route('login.google')}}" >Sign in with google</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+
                 </div>
             </div>
        

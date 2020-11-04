@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/formsubmit',[App\Http\Controllers\FormController::class, 'handle'])->name('form');
+Route::get('/googlelogin',[App\Http\Controllers\Auth\LoginController::class, 'redirectToProvider'])->name('login.google');
+Route::get('/addGoogle',[App\Http\Controllers\Auth\LoginController::class, 'handleProviderCallback'])->name('add.google');

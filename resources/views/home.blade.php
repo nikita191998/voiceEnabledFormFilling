@@ -34,7 +34,7 @@
       <div class="text-center">
         <div>
       <i class="fa fa-microphone" style="font-size:24px;position:absolute;bottom:10%"></i></div>
-      <h3>ASSISTANT</h3>
+      <h3>CONVERSATION</h3>
       <div class="chatarea-outer">
         <div class="chatarea-inner user">What is Your Name</div><div class="chatarea-inner chatbot">My name is XYZ</div></div>
         <div class="chatarea-inner user">What is your Father's name</div><div class="chatarea-inner chatbot">My Father's name is ABC</div></div>

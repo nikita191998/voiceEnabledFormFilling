@@ -1,5 +1,5 @@
 
-            <div class="card hidden" id="register">
+            <div class="card hidden mt-5" id="register">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -63,7 +63,26 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="form-group row mb-0 pt-3">
+                            <div class="col-md-6 offset-md-4">
+                            Already have an account?
+                            <a id="loginb" class="" onclick="showlogin()" >Login</a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0 pt-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="d-flex justify-content-between align-items-center btn" style="background:#dfe1e5;width:250px">
+                                    <div>
+                                        <img src="{{asset('images/download.png')}}" alt="" width='33' >
+                                    </div>
+                                    <div>
+                                        <a style="color:black" href="{{route('login.google')}}" >Sign up with google</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
+
                 </div>
             </div>
       
