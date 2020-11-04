@@ -1,47 +1,61 @@
- @extends('layouts.app')
+@extends('layouts.app')
 
- @section('content')
-
-  <div class="container">
-    <div class="row">
-      <div class="col-7">
-        <div class="text-center">
-          <h2>MIET REGISTRATION FORM</h2>
-        </div>
-        <form action="/action_page.php">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="name" class="form-control" id="name" placeholder="Enter Your Name" name="name">
-          </div>
-          <div class="form-group">
-            <label for="fname">Father's Name</label>
-            <input type="name" class="form-control" id="fname" placeholder="Enter Your Father's Name" name="fname">
-          </div>
-          <div class="form-group">
-            <label for="mname">Mother's Name</label>
-            <input type="name" class="form-control" id="mname" placeholder="Enter Your Mother's Name" name="mname">
-          </div>
-          <div class="form-group">
-            <label for="dob">Date of Birth(DOB)</label>
-            <input type="date" class="form-control" id="dob" placeholder="Enter Your Date of Birth" name="dob">
-          </div>
-           <div class="text-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form> 
+@section('content')
+<div class="container"></div>
+  <div class="row">
+    <div class="col-6 offset-1">
+      <div class="mb-4">
+        <h1>
+          Dashboard
+        </h1>
       </div>
-      <div class="col-5">
-      <div class="text-center">
-        <div>
-      <i class="fa fa-microphone" style="font-size:24px;position:absolute;bottom:10%"></i></div>
-      <h3>CONVERSATION</h3>
-      <div class="chatarea-outer">
-        <div class="chatarea-inner user">What is Your Name</div><div class="chatarea-inner chatbot">My name is XYZ</div></div>
-        <div class="chatarea-inner user">What is your Father's name</div><div class="chatarea-inner chatbot">My Father's name is ABC</div></div>
-        </div>
-
+      </hr>
+      <div class="row">
+      <div class="col-4">
+        <h3>Admission Forms</h3>
+        <ul class="list-group">
+          <!-- <li class="list-group-item">Cras justo odio</li> -->
+          <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
+          <!-- <li class="list-group-item">Morbi leo risus</li> -->
+          <!-- <li class="list-group-item">Porta ac consectetur ac</li> -->
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'colRegistration'])}}">FOR BE</a></li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <h3>Examination Forms</h3>
+        <ul class="list-group">
+          <!-- <li class="list-group-item">Cras justo odio</li> -->
+          <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
+          <!-- <li class="list-group-item">Morbi leo risus</li> -->
+          <!-- <li class="list-group-item">Porta ac consectetur ac</li> -->
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'examForm'])}}">Exam Registration</a></li>
+          
+        </ul>
+      </div>
+      
+      
+      </div>
+     
     </div>
-   </div>
-  </div>
+    <footer class='footer row col-12 align-items-center' style=" bottom: 0;
+    position: fixed;height:40px;background:#563d7c">
+          <div class="col-12 ">
+          <style>
+          span{
+            color:white;
+            
+          }
+          </style>
+            <span>
+              Contact Info
+            </span>
+            <span>
+              78890288
+            </span>
 
+          </div>
+          
+      </footer>
+  </div>
+</div>
 @endsection

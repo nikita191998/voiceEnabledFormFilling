@@ -13,4 +13,21 @@ class FormController extends Controller
         $request=$request['password'];
       return view('dashboard',['ty'=>$request]);
     }
+    public function getform($type){
+        
+        switch ($type) {
+            case 'colRegistration':
+                return view('Forms.colRegistration');
+            case 'examForm':
+                return view('forms.examForm'); 
+                # code...
+                break;
+            
+            default:
+            return redirect('/404');
+                # code...
+                break;
+        }
+    }
 }
+
