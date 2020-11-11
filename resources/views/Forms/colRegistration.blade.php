@@ -33,6 +33,7 @@
             <label for="ph">Phone Number</label>
             <input type="string" class="form-control" id="ph" placeholder="Enter Your Date of Birth" name="dob">
           </div>
+          
            <div class="text-center">
           <button type="submit" class="btn btn-primary">Submit</button>
           </div>
