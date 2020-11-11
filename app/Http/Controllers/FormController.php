@@ -19,7 +19,15 @@ class FormController extends Controller
             case 'colRegistration':
                 return view('Forms.colRegistration');
             case 'examForm':
-                return view('forms.examForm'); 
+                return view('Forms.examForm');
+            case 'addmba':
+                return view('Forms.addmba');
+            case 'mtech':
+                return view('Forms.mtech');
+            case 'exammba':
+                return view('Forms.exammba');
+            case 'exammtech':
+                return view('Forms.exammtech');         
                 # code...
                 break;
             

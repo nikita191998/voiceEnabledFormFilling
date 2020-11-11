@@ -23,21 +23,20 @@
           </div>
           <div class="form-group">
             <label for="dob">Date of Birth(DOB)</label>
-            <input type="date" class="form-control" id="dob" placeholder="Enter Your Date of Birth" name="dob">
+            <input type="string" class="form-control" id="dob" placeholder="Enter Your Date of Birth" name="dob">
           </div>
           <div class="form-group">
-            <label for="dob">Stream</label>
-            <select name="" id="" class="form-group col-6 form-control">
-            <option>CSE</option>
-            <option>CIVIL</option>
-            <option>ECE</option>
-            <option>EE</option>
-            </select>
-            <!-- <input type="date" class="form-control" id="dob" placeholder="Enter Your Date of Birth" name="dob"> -->
+            <label for="stream">Stream</label>
+            <input type="name" class="form-control" id="stream" placeholder="Enter Your Stream" name="name">
+          </div>
+          <div class="form-group">
+            <label for="ph">Phone Number</label>
+            <input type="string" class="form-control" id="ph" placeholder="Enter Your Date of Birth" name="dob">
           </div>
            <div class="text-center">
           <button type="submit" class="btn btn-primary">Submit</button>
           </div>
+         
         </form> 
       </div>
       <!-- <div class="col-5">

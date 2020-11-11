@@ -42,7 +42,7 @@
         </style>
     </head>
     <body class="container-fluid" id="homepage">
-        <div class="row" style="height:100%">
+        <div class="row" style="height:728px">
             <div class="col-6 offset-3">
                 @if (Route::has('login'))
                     <div class="">
@@ -59,8 +59,35 @@
                         @endif
                     </div>
                 @endif
-            <div>
+            </div>
         </div>
+                    <hr>
+
+        <div style="height:750px;backdrop-filter: blur(5px);">
+            <div class="row">
+                <div class="col-12" >
+                    <div class="d-flex justify-content-center mt-3">
+                        <h2>About US</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                    <div class="col-8  ">
+                        <span style="font-size:1.9rem">
+                            Our voice Assissted form filling will help you fill forms with easy and refrain you from typing in the same  data again and again(which you dont to anyway)
+                        </span>
+                    </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-3 mr-4">
+                <div><img src="{{asset('images/tts.jpeg')}}" style="height:250px;width:100%;    border-radius: 10px;" alt=""></div>
+                </div>
+                <div class="col-3 ml-5">
+                <div><img src="{{asset('images/stt.jpeg')}}" style="height: 250px;width:100%;    border-radius: 10px;" alt=""></div>
+                </div>
+            </div>
+        </div>
+        @include("footer")
     </body>
     <script>
         const login=document.getElementById('login')

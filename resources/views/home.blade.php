@@ -19,6 +19,8 @@
           <!-- <li class="list-group-item">Morbi leo risus</li> -->
           <!-- <li class="list-group-item">Porta ac consectetur ac</li> -->
           <li class="list-group-item"><a href="{{route('get.form',['type'=>'colRegistration'])}}">FOR BE</a></li>
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'addmba'])}}">FOR MBA</a></li>
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'mtech'])}}">FOR M.Tech</a></li>
         </ul>
       </div>
       <div class="col-4">
@@ -28,7 +30,10 @@
           <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
           <!-- <li class="list-group-item">Morbi leo risus</li> -->
           <!-- <li class="list-group-item">Porta ac consectetur ac</li> -->
-          <li class="list-group-item"><a href="{{route('get.form',['type'=>'examForm'])}}">Exam Registration</a></li>
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'examForm'])}}">Exam Registration for BE</a></li>
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'exammba'])}}">Exam Registration for MBA</a></li>
+          <li class="list-group-item"><a href="{{route('get.form',['type'=>'exammtech'])}}">Exam Registration M.Tech</a></li>
+          
           
         </ul>
       </div>
@@ -37,25 +42,7 @@
       </div>
      
     </div>
-    <footer class='footer row col-12 align-items-center' style=" bottom: 0;
-    position: fixed;height:40px;background:#563d7c">
-          <div class="col-12 ">
-          <style>
-          span{
-            color:white;
-            
-          }
-          </style>
-            <span>
-              Contact Info
-            </span>
-            <span>
-              78890288
-            </span>
-
-          </div>
-          
-      </footer>
+    @include("footer")
   </div>
 </div>
 @endsection
