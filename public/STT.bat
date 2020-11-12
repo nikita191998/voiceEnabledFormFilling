@@ -1,0 +1,1 @@
+"C:\Users\ACER\AppData\Local\UiPath\app-20.10.2\UiRobot.exe" -file "C:\Users\ACER\Documents\UiPath\Speech to text\SpeechToText.xaml"

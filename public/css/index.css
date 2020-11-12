@@ -27,14 +27,14 @@
     float: right;
     border-radius: 10px;
 }
-.col-5 {
+/* .col-5 {
     align-content: center;
     width: 600px;
     height: 600px;
     background: white;
     border: 1px solid black;
     border-radius: 10px;
-}
+} */
 h3,
 .h3 {
     font-size: 1.575rem;
