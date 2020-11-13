@@ -34,8 +34,8 @@
                      </div>
                      <div class="form-group">
                          <label for="ph">Phone Number</label>
-                         <input type="string" class="form-control" id="ph" placeholder="Enter Your Date of Birth"
-                             name="dob">
+                         <input type="string" class="form-control" id="ph" placeholder="Enter Your Phone Number "
+                             name="ph">
                      </div>
 
                      <div class="text-center">
@@ -43,19 +43,17 @@
                      </div>
 
                  </form>
+                 <button onclick="StartBot()">click</button>
              </div>
-             <!-- <div class="col-5">
-          <div class="text-center">
-            <div> -->
-             <!-- <i class="fa fa-microphone" style="font-size:24px;position:absolute;bottom:10%"></i></div> -->
-             <!-- <h3>CONVERSATION</h3> -->
-             <!-- <div class="chatarea-outer">
-            <div class="chatarea-inner user">What is Your Name</div><div class="chatarea-inner chatbot">My name is XYZ</div></div>
-            <div class="chatarea-inner user">What is your Father's name</div><div class="chatarea-inner chatbot">My Father's name is ABC</div></div>
-            </div>
-
-        </div>
-       </div>
-      </div> -->
+            <script>
+                function StartBot(){
+                    const form=window.location.pathname
+                    $.ajax({
+                        url:"/startbot/"+form.split('/')[2],
+                        type:'GET',
+                    })
+                    }
+                
+            </script>
 
          @endsection

@@ -17,6 +17,7 @@ class FormController extends Controller
         
         switch ($type) {
             case 'colRegistration':
+                
                 return view('Forms.colRegistration');
             case 'examForm':
                 return view('Forms.examForm');
@@ -35,6 +36,7 @@ class FormController extends Controller
             return redirect('/404');
                 # code...
                 break;
+                
         }
     }
 }
