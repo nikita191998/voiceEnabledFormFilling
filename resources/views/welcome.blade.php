@@ -81,7 +81,7 @@
                 <div class="col-8  ">
                     <span style="font-size:1.9rem">
                         Our voice Assissted form filling will help you fill forms with easy and refrain you from typing in
-                        the same data again and again(which you dont to anyway)
+                        the same data again and again(which you don't want to anyway)
                     </span>
                 </div>
             </div>
