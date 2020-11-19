@@ -2,16 +2,31 @@
 
 namespace App\Http\Controllers;
 // use Input;
+use \App\Models\colRegistration;
 use Illuminate\Http\Request;
-
+use Auth;
 class FormController extends Controller
 {
     public function __contruct(){
         $this->middleware('web');
     }
     public function handle(Request $request){
-        $request=$request['password'];
-      return view('dashboard',['ty'=>$request]);
+       $data= $request;
+        colRegistration::create([
+            'user_id'=>Auth::id(),
+            "name"=>$data->name,
+            "father_name"=>$data->fname,
+            "mother_name"=>$data->mname,
+            "DOB"=>$data->DOB,
+            "stream"=>$data->stream,
+            "Phone_no"=>$data->phone_no,
+            "gender"=>$data->gender,
+            "Category"=>$data->category,
+            "address"=>$data->address,
+            "state"=>$data->state,
+            "pincode"=>$data->pincode
+        ]);
+        return view('success');
     }
     public function getform($type){
         
