@@ -28,11 +28,10 @@ class FormController extends Controller
             "state"=>$data->state,
             "pincode"=>$data->pincode
         ]);
-        $this->sendmail(Auth::user()->email);
+        $this->sendEmail(Auth::user()->email);
         return view('success');
     }
     public function getform($type){
-        $this->sendEmail(Auth::user()->email);
 
         switch ($type) {
             case 'colRegistration':
@@ -58,7 +57,7 @@ class FormController extends Controller
                 
         }
     }
-    public function sendmail($mailto)
+    public function sendEmail($mailto)
     {
         $details=[
             'title' => 'Form Submission',
