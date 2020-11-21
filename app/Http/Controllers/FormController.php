@@ -32,7 +32,7 @@ class FormController extends Controller
             "state" => $data->state,
             "pincode" => $data->pincode,
         ]);
-        $this->sendEmail(Auth::user()->email);
+        // $this->sendEmail(Auth::user()->email);
         return view('success');
     }
     public function getform($type)
@@ -69,7 +69,7 @@ class FormController extends Controller
             'body' => 'Your form has been submitted Successfully.',
 
         ];
-        Mail::to($mailto)->send(new testmail($details));
+        // Mail::to($mailto)->send(new testmail($details));
         return 'success';
     }
 }
