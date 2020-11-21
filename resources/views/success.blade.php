@@ -2,7 +2,7 @@
 
 @section('content')
 
-Form Submitted Successfully
+     Form Submitted Successfully
 
 
 @endsection('content')
