@@ -11,7 +11,7 @@ class BotController extends Controller
 {
     switch ($form) {
         case 'colRegistration':
-            shell_exec("‪C:\Users\nikhi\Desktop\vff.bat");
+            shell_exec("C:\Users\ACER\Desktop\bgm.bat");
             break;
         
         default:
