@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div id="chart-container"></div>
+    <div class="col-8 offset-1"><div id="chart-container"></div></div>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script>
         var datas=<?php echo json_encode($datas) ?>
@@ -96,6 +96,7 @@
                     {
                         condition:{
                             maxwidth:500
+                            
                         },
                         chartOptions:{
                             legend:{
