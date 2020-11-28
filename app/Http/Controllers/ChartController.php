@@ -6,27 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\colRegistration;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
-
 class ChartController extends Controller
 {
     public function index()
     {
-       $colregistration = User::select(DB::raw("COUNT(*) as count"))
-                          ->whereYear('created_at',date('Y'))
-                          ->groupBY(DB::raw("Month(created_at)"))
-                          ->pluck('count'); 
-                          
-        $months = User::select(DB::raw("Month(created_at) as month"))
-                          ->whereYear('created_at',date('Y'))
-                          ->groupBY(DB::raw("Month(created_at)"))
-                          ->pluck('month');
-        $datas = array(0,0,0,0,0,0,0,0,0,0,0,0);
-        foreach($months as $index => $month)
-        {
-            $datas[$month] =$colregistration[$index];
-        }
-        return view('home',compact('datas'));
-    
-    
-                        }
+        $mba_col=DB::table('col_reg_mba')->get()->count();
+        $be_col = colRegistration::all()->count();
+        $be_exam=DB::table('exam_registration')->get()->count();
+        $user=User::all()->count();
+
+        return view('home',compact('mba_col','be_col','be_exam','user'));
+    }
 }
