@@ -11,7 +11,7 @@ class ChartController extends Controller
 {
     public function index()
     {
-       $colregistration = colRegistration::select(DB::raw("COUNT(*) as count"))
+       $colregistration = User::select(DB::raw("COUNT(*) as count"))
                           ->whereYear('created_at',date('Y'))
                           ->groupBY(DB::raw("Month(created_at)"))
                           ->pluck('count'); 
@@ -20,12 +20,12 @@ class ChartController extends Controller
                           ->whereYear('created_at',date('Y'))
                           ->groupBY(DB::raw("Month(created_at)"))
                           ->pluck('month');
-        $dates = array(0,0,0,0,0,0,0,0,0,0,0,0);
+        $datas = array(0,0,0,0,0,0,0,0,0,0,0,0);
         foreach($months as $index => $month)
         {
-            $dates[$month] =$colregistration[$index];
+            $datas[$month] =$colregistration[$index];
         }
-        return view('chart',compact('datas'));
+        return view('home',compact('datas'));
     
     
                         }

@@ -76,7 +76,6 @@
                               <h2>About US</h2>
                          </div>
                     </div>
-<<<<<<< HEAD
                 </div>
             </div>
             <div class="row justify-content-center mt-5 mb-5">
@@ -121,49 +120,3 @@
     </script>
 
     </html>
-=======
-               </div>
-               <div class="row justify-content-center mt-5 mb-5">
-                    <div class="col-8  ">
-                         <span style="font-size:1.9rem">
-                              Our voice Assissted form filling will help you fill forms with easy and refrain you from typing
-                              in
-                              the same data again and again(which you don't want to anyway)
-                         </span>
-                    </div>
-               </div>
-               <div class="row justify-content-center mt-5">
-                    <div class="col-3 mr-4">
-                         <div><img src="{{ asset('images/rp.jpeg') }}"
-                                   style="height:250px;width:100%;    border-radius: 10px;" alt=""></div>
-                    </div>
-                    <div class="col-3 ml-5">
-                         <div><img src="{{ asset('images/r.jpeg') }}"
-                                   style="height: 250px;width:100%;    border-radius: 10px;" alt=""></div>
-                    </div>
-               </div>
-          </div>
-          @include("footer")
-     </body>
-     <script>
-          const login = document.getElementById('login')
-          const register = document.getElementById('register')
-
-          function showlogin() {
-               login.classList.add('show');
-               login.classList.remove('hidden');
-               register.classList.remove('show');
-               register.classList.add('hidden');
-          }
-
-          function showRegister() {
-               login.classList.add('hidden');
-               login.classList.remove('show');
-               register.classList.remove('hidden');
-               register.classList.add('show');
-          }
-
-     </script>
-
-     </html>
->>>>>>> a512fc622b2a3ea62b96826fdfae333071b723b6

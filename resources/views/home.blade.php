@@ -59,4 +59,60 @@
             </div>
         </div>
     </div>
+    <div id="chart-container"></div>
+    <script>
+        var datas = {{}}
+    
+        Highcharts.chart('chart-container',{
+            title:{
+                text:'Growth,2020'
+            },
+            subtitle:{
+                text:"Source: NA"
+            },
+            xAxis:{
+                categories:['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','Nov','Dec']
+            },
+            yaxis:{
+                title:{
+                    text:'No of Submissions'
+                }
+                 
+            },
+            legend:{
+                layout:'vertical',
+                align:'right',
+                verticalAlign:'middle'
+            },
+            plotOptions:{
+                series:{
+                    allowPoinrSelect:true
+                }
+            },
+            series:[{
+                name:'New User',
+                data:datas
+            }],
+            responsive:{
+                rules:[
+                    {
+                        condition:{
+                            maxwidth:500
+                        },
+                        chartOptions:{
+                            legend:{
+                                layout:'horizontal',
+                                align:'center',
+                                verticalAlign:'bottom'
+    
+                            }
+                        }
+                    }
+                ]
+            }
+    
+    
+        })
+    </script> 
+    
 @endsection
