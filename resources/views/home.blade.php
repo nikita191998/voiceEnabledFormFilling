@@ -60,8 +60,9 @@
         </div>
     </div>
     <div id="chart-container"></div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script>
-        var datas = {{}}
+        var datas=<?php echo json_encode($datas) ?>
     
         Highcharts.chart('chart-container',{
             title:{
