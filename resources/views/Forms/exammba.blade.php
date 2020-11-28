@@ -8,25 +8,25 @@
                     <div class="text-center">
                          <h2> MBA EXAMINATION FORM</h2>
                     </div>
-                    <form action="/action_page.php">
+                    <form action="{{route('form',['type'=>'col_reg_mba'])}}">
                          <div class="form-group">
                               <label for="name">Candidate's Name</label>
-                              <input type="name" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+                              <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name">
                          </div>
                          <div class="form-group">
                               <label for="fname">Father's Name</label>
-                              <input type="name" class="form-control" id="fname" placeholder="Enter Your Father's Name"
+                              <input type="text" class="form-control" id="fname" placeholder="Enter Your Father's Name"
                                    name="fname">
                          </div>
                          <div class="form-group">
                               <label for="mname">Mother's Name</label>
-                              <input type="name" class="form-control" id="mname" placeholder="Enter Your Mother's Name"
+                              <input type="text" class="form-control" id="mname" placeholder="Enter Your Mother's Name"
                                    name="mname">
                          </div>
                          <div class="form-group">
                               <label for="dob">Date of Birth(DOB)</label>
                               <input type="date" class="form-control" id="dob" placeholder="Enter Your Date of Birth"
-                                   name="dob">
+                                   name="DOB">
                          </div>
 
                          <div class="form-group">
