@@ -77,7 +77,7 @@
                          </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
             <div class="row justify-content-center mt-5 mb-5">
                 <div class="col-8  ">
                     <span style="font-size:1.9rem">
@@ -97,9 +97,9 @@
                 </div>
             </div>
         </div>
-        <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
-        </script>
-        <script type = "text/javascript">
+        <!-- <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"> -->
+        <!-- </script> -->
+        <!-- <script type = "text/javascript">
            google.charts.load('current', {packages: ['corechart']});     
         </script>
      
@@ -124,7 +124,7 @@
               chart.draw(data, options);
            }
            google.charts.setOnLoadCallback(drawChart);
-        </script>
+        </script> -->
         @include("footer")
     </body>
     <script>

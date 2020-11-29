@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row ">
             <div class="col-6 ">
                 <div class="">
@@ -67,10 +67,13 @@
             </div>
         </div>
     </div>
-    <div class="col-8 offset-1">
-        <div id="container_chart" style="width: 800px; height: 400px; margin: 0 auto">
+    <div class="row d-flex" style= "margin-top: 20px;">
+    <div class="col-4 offset-8">
+        <div id="container_chart" style="width: inherit; height: 300px; margin: 0 auto">
         </div>
     </div>
+    </div>
+   
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {
@@ -85,14 +88,14 @@
                 @php
                 echo "['BE Examination form', '".$be_exam.
                 "'],";
-                echo "['ollege forms', '".($mba_col + $be_col).
+                echo "['College forms', '".($mba_col + $be_col).
                 "'],";
                
                 @endphp
             ]);
             var options = {
                 chart: {
-                    title: 'Bar Graph | Submissions',
+                    title: 'Bar Graph | Graphical Representation of Form Data',
                 },
                 bars: 'vertical'
             };
