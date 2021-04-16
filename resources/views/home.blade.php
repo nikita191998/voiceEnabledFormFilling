@@ -88,7 +88,7 @@
                 @php
                 echo "['BE Examination form', '".$be_exam.
                 "'],";
-                echo "['College forms', '".($mba_col + $be_col).
+                echo "['BE Admission forms', '".($mba_col + $be_col).
                 "'],";
                
                 @endphp
