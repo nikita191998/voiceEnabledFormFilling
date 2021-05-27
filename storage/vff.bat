@@ -1,0 +1,1 @@
+"C:\Users\NITRO\AppData\Local\UiPath\app-21.4.2\UiRobot.exe" -file "C:\Users\NITRO\OneDrive\Documents\UiPath\ff\Main.xaml"

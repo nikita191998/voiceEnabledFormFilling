@@ -21,7 +21,56 @@ class FormController extends Controller
     {
         $data = $request;
         switch ($type) {
-            case 'colreg':
+            case 'colRegistration':
+                $aadhar='';
+                if ($request->file('aadhar') != "") {
+                    $file = $request->file('aadhar');
+                    $fileSize =  filesize($file);
+                    $fileSizeKb = ($fileSize/1000000);
+                    if($fileSizeKb >= 10){
+                        return redirect()->back();
+                    }
+                    $aadhar = 'doc2-' . md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+                    $file->move('document/', $aadhar);
+                    $aadhar =  'document/' . $aadhar;
+                }
+                $tenth='';
+                if ($request->file('tenth') != "") {
+                    $file = $request->file('tenth');
+                    $fileSize =  filesize($file);
+                    $fileSizeKb = ($fileSize/1000000);
+                    if($fileSizeKb >= 10){
+                        return redirect()->back();
+                    }
+                    $tenth = 'doc2-' . md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+                    $file->move('document/', $tenth);
+                    $tenth =  'document/' . $tenth;
+                }
+                $twelfth='';
+                if ($request->file('twelfth') != "") {
+                    $file = $request->file('twelfth');
+                    $fileSize =  filesize($file);
+                    $fileSizeKb = ($fileSize/1000000);
+                    if($fileSizeKb >= 10){
+                        return redirect()->back();
+                    }
+                    $twelfth = 'doc2-' . md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+                    $file->move('document/', $twelfth);
+                    $twelfth =  'document/' . $twelfth;
+                }
+                $pic='';
+                if ($request->file('pic') != "") {
+                    $file = $request->file('pic');
+                    $fileSize =  filesize($file);
+                    $fileSizeKb = ($fileSize/1000000);
+                    if($fileSizeKb >= 10){
+                        return redirect()->back();
+                    }
+                    $pic = 'doc2-' . md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+                    $file->move('document/', $pic);
+                    $pic =  'document/' . $pic;
+                }
+                
                 colRegistration::create([
                     'user_id' => Auth::id(),
                     "name" => $data->name,
@@ -35,9 +84,26 @@ class FormController extends Controller
                     "address" => $data->address,
                     "state" => $data->state,
                     "pincode" => $data->pincode,
+                    "aadhar"=>$aadhar,
+                    "tenth"=>$tenth,
+                    "twelfth"=>$twelfth,
+                    "pic"=>$pic
                 ]);
                 break;
             case "exam_reg":
+                $photo='';
+                if ($request->file('photo') != "") {
+                    $file = $request->file('photo');
+                    $fileSize =  filesize($file);
+                    $fileSizeKb = ($fileSize/1000000);
+                    if($fileSizeKb >= 10){
+                        return redirect()->back();
+                    }
+                    $photo = 'doc2-' . md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+                    $file->move('document/', $photo);
+                    $photo =  'document/' . $photo;
+                }
+                
                 DB::table('exam_registration')->insert([
                     'user_id' => Auth::id(),
                     "name" => $data->name,
@@ -48,7 +114,8 @@ class FormController extends Controller
                     "subject" => $data->subject,
                     "semester" => $data->semester,
                     "created_at"=>Date::now(),
-                    "updated_at"=>Date::now()
+                    "updated_at"=>Date::now(),
+                    "photo"=>$photo
                 ]);
                 break;
             case 'col_reg_mba':
@@ -67,7 +134,7 @@ class FormController extends Controller
                 break;
         }
         
-        // $this->sendEmail(Auth::user()->email);
+        $this->sendEmail(Auth::user()->email);
         return view('success');
     }
     public function getform($type)
@@ -104,7 +171,7 @@ class FormController extends Controller
             'body' => 'Your form has been submitted Successfully.',
 
         ];
-        // Mail::to($mailto)->send(new testmail($details));
+        Mail::to($mailto)->send(new testmail($details));
         return 'success';
     }
 }

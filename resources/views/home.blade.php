@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="row d-flex" style= "margin-top: 20px;">
+    <div class="row d-flex" style= "margin-top: 30px;">
     <div class="col-4 offset-8">
         <div id="container_chart" style="width: inherit; height: 300px; margin: 0 auto">
         </div>

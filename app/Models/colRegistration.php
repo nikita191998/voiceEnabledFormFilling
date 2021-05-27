@@ -21,7 +21,11 @@ protected $fillable=[
     "Category",
     "address",
     "state",
-    "pincode"];
+    "pincode",
+    "aadhar",
+    "tenth",
+    "twelfth",
+    'pic'];
 
     public function User(){
         return $this->belongsTo('\App\User');
